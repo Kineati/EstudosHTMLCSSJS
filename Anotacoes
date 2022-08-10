@@ -17,20 +17,23 @@
 
             <script>
                 var cont = 0;
+                var btnId = 0;
+
                 function CriarTitulo(){
                     var aux = document.getElementById("TituloAnotacao").value;
                     cont++;
                     
-                    const Titulo_Anotacao = document.createElement("p");
-                    Titulo_Anotacao.id = cont;
-                    Titulo_Anotacao.innerText = aux;
-                    Titulo_Anotacao.style = "font-size: 20px";
-                    document.body.appendChild(Titulo_Anotacao);
+                    const VarTituloAnotacao = document.createElement("p");
+                    VarTituloAnotacao.id = cont;
+                    VarTituloAnotacao.innerText = aux;
+                    VarTituloAnotacao.style = "font-size: 20px";
+                    document.body.appendChild(VarTituloAnotacao);
 
-                    const Btn_Deletar = document.createElement("button");
-                    Btn_Deletar.id = cont;
-                    Btn_Deletar.innerHTML = "Deletar Anotacao";
-                    document.body.appendChild(Btn_Deletar);
+                    const VarBtnDeletar = document.createElement("button");
+                    VarBtnDeletar.id = cont;
+                    VarBtnDeletar.innerHTML = "Deletar Anotacao";
+                    VarBtnDeletar.onclick = DeletarAnotacao;
+                    document.body.appendChild(VarBtnDeletar);
                 }
 
                 function MostrarValor(){
@@ -39,6 +42,12 @@
                     ValorCont.style = "font-size: 20px";
                     document.body.appendChild(ValorCont);
                 }
+
+                function DeletarAnotacao(){
+                    alert(this.id);
+                }
+
+                
             </script>
         </body>
 </html>
