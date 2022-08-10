@@ -17,7 +17,8 @@
 
             <script>
                 var cont = 0;
-                var btnId = 0;
+                var IdGlobal = 0;
+                
 
                 function CriarTitulo(){
                     var aux = document.getElementById("TituloAnotacao").value;
@@ -44,7 +45,10 @@
                 }
 
                 function DeletarAnotacao(){
-                    alert(this.id);
+                    IdGlobal = document.getElementById(this.id);
+                    IdGlobal.remove();
+                    IdGlobal = document.getElementById(this.id);
+                    IdGlobal.remove();
                 }
 
                 
