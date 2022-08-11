@@ -11,47 +11,43 @@
             </form>
             <p style="font-size: 20px"></p>
 
-            <button type="button" onclick="CriarTitulo()">Criar Anotacao</button>
-            <button type="button" onclick="MostrarValor()">Mostrar Valor</button>
+            <button type="button" onclick="FuncaoAdicionarAnotacao()">Criar Anotacao</button>
+            <button type="button" onclick="FuncaoMostrarQuantidadeAnotacoes()">Mostrar Quantidade</button>
             <p></p>
 
             <script>
-                var cont = 0;
+                var Contador = 0;
                 var IdGlobal = 0;
                 
 
-                function CriarTitulo(){
-                    var aux = document.getElementById("TituloAnotacao").value;
-                    cont++;
+                function FuncaoAdicionarAnotacao(){
+                    var TextoDigitadoInput = document.getElementById("TituloAnotacao").value;
+                    Contador++;
                     
-                    const VarTituloAnotacao = document.createElement("p");
-                    VarTituloAnotacao.id = cont;
-                    VarTituloAnotacao.innerText = aux;
-                    VarTituloAnotacao.style = "font-size: 20px";
-                    document.body.appendChild(VarTituloAnotacao);
+                    const TituloAnotacoCriada = document.createElement("p");
+                    TituloAnotacoCriada.id = Contador;
+                    TituloAnotacoCriada.innerText = TextoDigitadoInput;
+                    TituloAnotacoCriada.style = "font-size: 20px";
+                    document.body.appendChild(TituloAnotacoCriada);
 
-                    const VarBtnDeletar = document.createElement("button");
-                    VarBtnDeletar.id = cont;
-                    VarBtnDeletar.innerHTML = "Deletar Anotacao";
-                    VarBtnDeletar.onclick = DeletarAnotacao;
-                    document.body.appendChild(VarBtnDeletar);
+                    const BtnDeletarAnotacao = document.createElement("button");
+                    BtnDeletarAnotacao.id = Contador;
+                    BtnDeletarAnotacao.innerHTML = "Deletar Anotacao";
+                    BtnDeletarAnotacao.onclick = FuncaoDeletarAnotacao;
+                    document.body.appendChild(BtnDeletarAnotacao);
                 }
 
-                function MostrarValor(){
-                    const ValorCont = document.createElement("p");
-                    ValorCont.innerText = cont;
-                    ValorCont.style = "font-size: 20px";
-                    document.body.appendChild(ValorCont);
+                function FuncaoMostrarQuantidadeAnotacoes(){
+                    alert("Quantidade de Anotacoes Criadas(desde o Inicio): " + Contador);
                 }
 
-                function DeletarAnotacao(){
+                function FuncaoDeletarAnotacao(){
                     IdGlobal = document.getElementById(this.id);
                     IdGlobal.remove();
                     IdGlobal = document.getElementById(this.id);
                     IdGlobal.remove();
                 }
-
-                
+ 
             </script>
         </body>
 </html>
