@@ -1,51 +1,51 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Teste</title>
+        <title>Test</title>
         <link rel="stylesheet" href="CSS/styles.css">
     </head>
         <body>
-            <p style="font-size: 20px">Titulo da Anotacao:</p>
+            <p style="font-size: 20px">Note Title:</p>
             <form>
-                <input type="text" id="TituloAnotacao">
+                <input type="text" id="noteTitle">
             </form>
             <p style="font-size: 20px"></p>
 
-            <button type="button" onclick="FuncaoAdicionarAnotacao()">Criar Anotacao</button>
-            <button type="button" onclick="FuncaoMostrarQuantidadeAnotacoes()">Mostrar Quantidade</button>
+            <button type="button" onclick="addNote()">Create Note</button>
+            <button type="button" onclick="showTotalNoteQuantity()">Show Quantity</button>
             <p></p>
 
             <script>
-                var Contador = 0;
-                var IdGlobal = 0;
-                
+                var Counter = 0;
+                var globalId = 0;
 
-                function FuncaoAdicionarAnotacao(){
-                    var TextoDigitadoInput = document.getElementById("TituloAnotacao").value;
-                    Contador++;
+                function addNote(){
                     
-                    const TituloAnotacoCriada = document.createElement("p");
-                    TituloAnotacoCriada.id = Contador;
-                    TituloAnotacoCriada.innerText = TextoDigitadoInput;
-                    TituloAnotacoCriada.style = "font-size: 20px";
-                    document.body.appendChild(TituloAnotacoCriada);
+                    const writtenTextInput = document.getElementById("noteTitle").value;
+                    Counter++;
+                    
+                    const createdNoteTitle = document.createElement("p");
+                    createdNoteTitle.id = Counter;
+                    createdNoteTitle.innerText = writtenTextInput;
+                    createdNoteTitle.style = "font-size: 20px";
+                    document.body.appendChild(createdNoteTitle);
 
-                    const BtnDeletarAnotacao = document.createElement("button");
-                    BtnDeletarAnotacao.id = Contador;
-                    BtnDeletarAnotacao.innerHTML = "Deletar Anotacao";
-                    BtnDeletarAnotacao.onclick = FuncaoDeletarAnotacao;
-                    document.body.appendChild(BtnDeletarAnotacao);
+                    const deleteNoteBtn = document.createElement("button");
+                    deleteNoteBtn.id = Counter;
+                    deleteNoteBtn.innerHTML = "Delete Note";
+                    deleteNoteBtn.onclick = DeleteNote;
+                    document.body.appendChild(deleteNoteBtn);
                 }
 
-                function FuncaoMostrarQuantidadeAnotacoes(){
-                    alert("Quantidade de Anotacoes Criadas(desde o Inicio): " + Contador);
+                function showTotalNoteQuantity(){
+                    alert("Quantity of notes created(from the beginning): " + Counter);
                 }
 
-                function FuncaoDeletarAnotacao(){
-                    IdGlobal = document.getElementById(this.id);
-                    IdGlobal.remove();
-                    IdGlobal = document.getElementById(this.id);
-                    IdGlobal.remove();
+                function DeleteNote(){
+                    globalId = document.getElementById(this.id);
+                    globalId.remove();
+                    globalId = document.getElementById(this.id);
+                    globalId.remove();
                 }
  
             </script>
