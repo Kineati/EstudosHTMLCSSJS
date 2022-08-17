@@ -2,45 +2,82 @@
     height: 20px;
     width: 20px;
     position: absolute;
-    margin-left: 185px;
-    top: 64px;
+    margin-left: 725px;
+    top: 340px;
     border-radius: 50%;
+}
+
+.Note2{
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    position: relative;
+    margin-left: 728px;
+    bottom: 9px;
 }
 
 .Input1{
     border-radius: 10px 10px 10px 10px;
-    
+    margin-left: 540px;
+    margin-top: 339px;
 }
 
 .Aux{
     position: absolute;
-    margin-left: 215px;
+    margin-left: 800px;
     top: 64px;
 }
 
-.Note2{
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    position: relative;
-    margin-left: 181px;
-    bottom: -20px;
-}
-
 body{
-    background-color: white;
+    background-color: grey;
     color: black;
-
+    margin: 0 auto;
 }
 
 .Title1{
-    background-color: grey;
     color: black;
     border-style: groove;
-    border-color: black;
+    border-color: rgb(136, 136, 136);
+    background-color: white;
     text-align: center;
     height: 21px;
-    width: 200px;
-    margin-bottom: -44px;
+    width: 205px;
+    margin-left: 540px;
+    margin-top: -10px;
+    margin-bottom: -13px;
 }
+
+.Background{
+    height: 93px;
+    width: 205px;
+    border-style: groove;
+    border-color: rgb(68, 81, 255);
+    left: 540px;
+    top: 355px;
+    position: absolute;
+}
+
+.BG1{
+    height: 84px;
+    width: 204px;
+    left: 540px;
+    position: absolute;
+    background-color: white;
+    z-index: -1;
+}
+
+.BG2{
+    height: 150px;
+    width: 220px;
+    left: 533px;
+    bottom: 380px;
+    position: absolute;
+    background-color: white;
+    z-index: -2;
+    border-style: groove;
+    border-color: black;
+    border-radius: 10px 10px 10px 10px;
+}
+
+
 
